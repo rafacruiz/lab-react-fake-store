@@ -23,6 +23,10 @@ function ProductDetails({ id }) {
     productId(id);
   }, []);
 
+  const handleCartAddItem = async (id) => {
+    await ProductsServices.setCart(id);
+  };
+
   return (
     <div className="row">
       <div className="col-12">
@@ -47,7 +51,8 @@ function ProductDetails({ id }) {
               </div>
               <p className="py-3"> { product.description } </p>
               
-              <Link to={`/`} className="btn btn-success">Back</Link>
+              <button type="button" className="btn btn-outline-secondary btn-sm" onClick={() => handleCartAddItem(product.id)}>Add Cart</button>
+              <Link to={`/`} className="btn btn-success btn-sm">Back</Link>
             </div>
           </div>
         </div>
