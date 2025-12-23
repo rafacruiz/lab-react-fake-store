@@ -1,6 +1,6 @@
 import * as ProductsServices from './../../../services/products-service';
 
-function CartItem ({ cart, item, onChangeQuantity }) {
+function CartItem ({ item, onChangeQuantity }) {
 
     return (<div className="shadow bg-body-tertiary rounded py-3 mb-2">
                 <div className="card-body">

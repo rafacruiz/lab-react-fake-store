@@ -37,9 +37,8 @@ function CartList () {
                 <div className="col-8">
                     {cart.length > 0 
                         ? cart.map((cartItem) => ( <CartItem 
-                                                        cart={ cart }
-                                                        item={ cartItem } 
-                                                        key={cartItem.id} 
+                                                        key={cartItem.id}
+                                                        item={ cartItem }  
                                                         onChangeQuantity = {handleSetQuantity}
                                                      />))
                         : <div className="fw-bold py-3"> Cart empty!</div>
