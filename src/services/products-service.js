@@ -54,7 +54,7 @@ export async function getCart() {
     }
 }
 
-export async function setCart(id) {
+export async function setCart (id) {
     try {
         const cart = { 
             userId: 1, 
